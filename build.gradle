@@ -6,14 +6,17 @@ plugins {
 }
 
 group = 'com.jktest'
-version = '0.0.1-SNAPSHOT'
+version = ''
 sourceCompatibility = '11'
+
+bootWar.enabled = false
+war.enabled = true
 
 configurations {
 	compileOnly {
 		extendsFrom annotationProcessor
 	}
-	jar.archiveName = "ROOT.war"
+	jar.archiveName = "ROOT" 
 }
 
 repositories {
