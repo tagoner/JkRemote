@@ -13,9 +13,7 @@ configurations {
 	compileOnly {
 		extendsFrom annotationProcessor
 	}
-	jar {
-		archiveName = "ROOT.war"
-	}
+	jar.archiveName = "ROOT.war"
 }
 
 repositories {
