@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapper namespace="pro.main.model.HomeMapper">
+    <select id="getUser" resultType="pro.main.bean.User">
+        SELECT id
+             , pw
+             , nm
+        FROM USER
+    </select>
+</mapper>
