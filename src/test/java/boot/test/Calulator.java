@@ -1,3 +1,4 @@
+package boot.test;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -7,8 +8,8 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ContextConfiguration;
 
-import com.JwtProvider;
 import com.core.Application;
+import com.util.JwtProvider;
 
 import io.jsonwebtoken.Claims;
 import lombok.extern.slf4j.Slf4j;
