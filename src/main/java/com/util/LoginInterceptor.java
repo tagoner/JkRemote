@@ -17,7 +17,7 @@ public class LoginInterceptor implements HandlerInterceptor {
 		//컨트롤러 진입 전
 		log.info("- PreHanlder -");
 		
-		
+		/*
 		HttpSession session = request.getSession();
         if(session.getAttribute("login") == null) {
             log.info("is not login");
@@ -26,6 +26,7 @@ public class LoginInterceptor implements HandlerInterceptor {
             response.sendRedirect("/login");
             return false;
         }
+        */
         
         //Controller 호출
         return true;
