@@ -27,13 +27,13 @@ dependencies {
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	//롬복
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
 	//마리아디비
 	runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
 	//마이바티스
 	implementation 'org.mybatis:mybatis:3.5.9'
-	//롬복
-	compileOnly 'org.projectlombok:lombok'
-	annotationProcessor 'org.projectlombok:lombok'
 	//세션
 	implementation 'org.springframework.session:spring-session-core'
 	//시큐리티
