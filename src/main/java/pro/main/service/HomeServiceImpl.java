@@ -1,13 +1,11 @@
 package pro.main.service;
 
-import javax.annotation.Resource;
-
 import org.springframework.stereotype.Service;
 
 import lombok.extern.slf4j.Slf4j;
 import pro.main.bean.User;
 import pro.main.model.HomeMapper;
-import pro.main.service.Inf.HomeService;
+import pro.main.service.inh.HomeService;
 
 @Slf4j
 @Service("homeService")

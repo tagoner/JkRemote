@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <!-- <meta http-equiv="Refresh" content="5" /> -->
+    <title>로그인</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link href="https://getbootstrap.com/docs/4.0/examples/signin/signin.css" rel="stylesheet" crossorigin="anonymous"/>
+</head>
+<script src="/js/com.js"></script>
+<body>
+    <div class="container">
+        <div class="form-signin">
+            <h2 class="form-signin-heading">로그인</h2>
+            <p>
+                <label for="username" class="sr-only">Username</label>
+                <input type="text" name="id" class="form-control" placeholder="ID" required>
+            </p>
+            <p>
+                <label for="password" class="sr-only">Password</label>
+                <input type="password" name="pw" class="form-control" placeholder="PW" required>
+            </p>
+            <button class="btn btn-lg btn-primary btn-block" id="btn_login">Login</button>
+            <button class="btn btn-lg btn-primary btn-block" id="btn_signUp" onclick="location.href='/view/signUp'" type="button">SignUp</button>
+        </div>
+    </div>
+</body>
+<script>
+    window.onload = function() {
+        /* 컴포넌트 */
+        const btnLogin = document.getElementById("btn_login");
+        btnLogin.addEventListener("click", login);
+        
+        
+        /* 함수 */
+        function validation(id, pw) {
+            return id && pw ? true : false;
+        }
+        
+        function login() {
+            var id = document.getElementsByName("id")[0].value;
+            var pw = document.getElementsByName("pw")[0].value;
+            
+            if(validation(id, pw)) {
+                var param = {
+                    "id" : id
+                ,   "pw" : pw
+                };
+                httpRequestGetResponse("/auth/login", param, (res) => {
+                    console.log(res);
+                });
+            }
+        }
+    }
+</script>
+</html>

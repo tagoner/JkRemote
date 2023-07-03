@@ -8,6 +8,10 @@ spring:
   config:
     import:
     - classpath:properties/common.yml
+  security:
+    user:
+      name: tagon
+      password: tagon
   datasource:
     driver-class-name: org.mariadb.jdbc.Driver
     url: jdbc:mariadb:localhost:3306

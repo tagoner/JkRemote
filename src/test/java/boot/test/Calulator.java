@@ -29,7 +29,7 @@ class Calulator {
 		Map<String,String> param = new LinkedHashMap<>();
 		param.put("name", "tagon");
 		param.put("age", "29");
-		
+		/*
 		try {
     		String token = test.createToken(param);
     		log.info("en_token : {}", token);
@@ -40,5 +40,6 @@ class Calulator {
 		catch(Exception e) {
 		    log.error("", e);
 		}
+		*/
 	}
 }

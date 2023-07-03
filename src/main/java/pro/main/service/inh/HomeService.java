@@ -1,4 +1,4 @@
-package pro.main.service.Inf;
+package pro.main.service.inh;
 
 import pro.main.bean.User;
 
